@@ -1,0 +1,37 @@
+﻿@using Orchard.Utility.Extensions
+@model IDeliverable.Bits.ConnectedContent.ViewModels.ConnectedByViewModel
+<fieldset>
+    <table class="items">
+        @if (Model.RelatedContentItems.Keys.Any())
+        {
+            foreach (var groupName in Model.RelatedContentItems.Keys)
+            {
+                <thead>
+                <tr>
+                    <th>@groupName.CamelFriendly()</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var contentItem in Model.RelatedContentItems[groupName])
+                {
+                    var itemDisplayText = Html.ItemDisplayText(contentItem).ToString();
+                    <tr>
+                        <td>@Html.ItemEditLinkWithReturnUrl(itemDisplayText, contentItem)</td>
+                        <td><a href="#" data-unsafeurl="@T("Are you sure you want to disconnect this item?")">@T("Disconnect")</a></td>
+                    </tr>
+                }
+                </tbody>
+            }
+        }
+        else
+        {
+            <thead>
+            <th>@T("Inverse Connections")</th>
+            </thead>
+            <tbody>
+            <td>@T("There are no other content items referencing this one.")</td>
+            </tbody>
+        }
+    </table>
+</fieldset>

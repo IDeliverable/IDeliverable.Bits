@@ -1,0 +1,32 @@
+﻿Name: IDeliverable.Bits
+AntiForgery: enabled
+Author: IDeliverable
+Website: http://www.ideliverable.com
+Version: 1.0
+OrchardVersion: 1.0
+Description: Provides various useful bits and bobs for site building.
+Features:
+    IDeliverable.Bits:
+        Name: Bits
+        Description: Enables various useful bits and bobs.
+        Category: Designer
+    IDeliverable.Bits.Navigation
+        Name: Navigation Bits
+        Description: Enables useful bits and bobs related to navigation.
+        Category: Navigation
+        Dependencies: Navigation, Orchard.Widgets
+    IDeliverable.Bits.Recipes
+        Name: Recipes Bits
+        Description: Enables useful bits and bobs related to recipes.
+        Category: Content
+        Dependencies: Orchard.Recipes
+    IDeliverable.Bits.Sockets
+        Name: Sockets Bits
+        Description: Adds the ability to associate content items with one another. Similar to connecting content through Taxonomy Terms, but without the need for taxonomies.
+        Category: Content
+        Dependencies: Orchard.ContentPicker
+    IDeliverable.Bits.ConnectedContent
+        Name: Connected Content Bits
+        Description: Extends ContentPickerField by storing the related content item IDs into the database so that the related content themselves can query who they are linked to via the ConnectedByPart.
+        Category: Content
+        Dependencies: Orchard.ContentPicker
