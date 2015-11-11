@@ -1,5 +1,5 @@
 ﻿@using Orchard.Utility.Extensions
-@model IDeliverable.Bits.ConnectedContent.ViewModels.ConnectedByViewModel
+@model IDeliverable.Bits.Relationships.ViewModels.RelatedByByViewModel
 <fieldset>
     <table class="items">
         @if (Model.RelatedContentItems.Keys.Any())
@@ -27,7 +27,7 @@
         else
         {
             <thead>
-            <th>@T("Inverse Connections")</th>
+            <th>@T("Inverse Relationships")</th>
             </thead>
             <tbody>
             <td>@T("There are no other content items referencing this one.")</td>

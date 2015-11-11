@@ -97,7 +97,7 @@
     <Content Include="Web.config" />
     <Content Include="Properties\AssemblyInfo.cs" />
     <Content Include="Module.txt" />
-    <Content Include="Views\EditorTemplates\Parts\ConnectedBy.cshtml" />
+    <Content Include="Views\EditorTemplates\Parts\RelatedBy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
@@ -126,14 +126,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConnectedContent\Drivers\ConnectedByPartDriver.cs" />
-    <Compile Include="ConnectedContent\ViewModels\ConnectedByViewModel.cs" />
-    <Compile Include="ConnectedContent\Drivers\ContentPickerFieldDriver.cs" />
-    <Compile Include="ConnectedContent\Migrations\ConnectedContentMigrations.cs" />
-    <Compile Include="ConnectedContent\Models\ContentConnectionRecord.cs" />
-    <Compile Include="ConnectedContent\Parts\ConnectedByPart.cs" />
-    <Compile Include="ConnectedContent\Services\IContentConnectionService.cs" />
-    <Compile Include="ConnectedContent\Services\ContentConnectionService.cs" />
+    <Compile Include="Relationships\Drivers\RelatedByPartDriver.cs" />
+    <Compile Include="Relationships\ViewModels\RelatedByByViewModel.cs" />
+    <Compile Include="Relationships\Drivers\ContentPickerFieldDriver.cs" />
+    <Compile Include="Relationships\Migrations\RelationshipsMigrations.cs" />
+    <Compile Include="Relationships\Models\RelationshipRecord.cs" />
+    <Compile Include="Relationships\Parts\RelatedByPart.cs" />
+    <Compile Include="Relationships\Services\IRelationshipService.cs" />
+    <Compile Include="Relationships\Services\RelationshipService.cs" />
     <Compile Include="Helpers\StringExtensions.cs" />
     <Compile Include="Helpers\ZoneHelpers.cs" />
     <Compile Include="Navigation\Migrations\Migrations.cs" />

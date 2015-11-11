@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using IDeliverable.Bits.ConnectedContent.Services;
+using IDeliverable.Bits.Relationships.Services;
 using Orchard.ContentManagement;
 using Orchard.ContentManagement.Drivers;
 using Orchard.ContentManagement.Handlers;
@@ -10,16 +10,16 @@ using Orchard.Environment.Extensions;
 using Orchard.Localization;
 using ContentItemElement = Orchard.Layouts.Elements.ContentItem;
 
-namespace IDeliverable.Bits.ConnectedContent.Drivers
+namespace IDeliverable.Bits.Relationships.Drivers
 {
-    [OrchardFeature("IDeliverable.Bits.ConnectedContent")]
+    [OrchardFeature("IDeliverable.Bits.Relationships")]
     public class ContentPickerFieldDriver : ContentFieldDriver<ContentPickerField>
     {
-        private readonly IContentConnectionService mContentConnectionService;
+        private readonly IRelationshipService mRelationshipService;
 
-        public ContentPickerFieldDriver(IContentConnectionService contentConnectionService)
+        public ContentPickerFieldDriver(IRelationshipService relationshipService)
         {
-            mContentConnectionService = contentConnectionService;
+            mRelationshipService = relationshipService;
             T = NullLocalizer.Instance;
         }
 
@@ -44,7 +44,7 @@ namespace IDeliverable.Bits.ConnectedContent.Drivers
             
             if (!settings.Required || ids.Length > 0)
             {
-                mContentConnectionService.SetConnectedItems(part.Id, field.Name, ids);
+                mRelationshipService.SetRelationships(part.Id, field.Name, ids);
             }
 
             return null;
@@ -59,7 +59,7 @@ namespace IDeliverable.Bits.ConnectedContent.Drivers
                     .Select(context.GetItemFromSession)
                     .Select(contentItem => contentItem.Id).ToArray();
 
-                mContentConnectionService.SetConnectedItems(part.Id, field.Name, ids);
+                mRelationshipService.SetRelationships(part.Id, field.Name, ids);
             }
         }
     }

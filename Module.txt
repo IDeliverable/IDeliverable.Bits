@@ -25,8 +25,8 @@ Features:
         Description: Adds the ability to associate content items with one another. Similar to connecting content through Taxonomy Terms, but without the need for taxonomies.
         Category: Content
         Dependencies: Orchard.ContentPicker
-    IDeliverable.Bits.ConnectedContent
-        Name: Connected Content Bits
-        Description: Extends ContentPickerField by storing the related content item IDs into the database so that the related content themselves can query who they are linked to via the ConnectedByPart.
+    IDeliverable.Bits.Relationships
+        Name: Relationships Bits
+        Description: Extends ContentPickerField by storing the related content item IDs into the database so that the related content themselves can query who they are linked to via the RelatedByPart.
         Category: Content
         Dependencies: Orchard.ContentPicker

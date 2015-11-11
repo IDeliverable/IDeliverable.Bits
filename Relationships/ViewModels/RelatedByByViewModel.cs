@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Orchard.ContentManagement;
 
-namespace IDeliverable.Bits.ConnectedContent.ViewModels
+namespace IDeliverable.Bits.Relationships.ViewModels
 {
-    public class ConnectedByViewModel
+    public class RelatedByByViewModel
     {
         public IDictionary<string, IEnumerable<ContentItem>> RelatedContentItems { get; set; }
     }
