@@ -130,6 +130,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Layouts\Shapes\ElementShapeAlternates.cs" />
     <Compile Include="Relationships\Drivers\RelatedByPartDriver.cs" />
     <Compile Include="Relationships\ViewModels\RelatedByByViewModel.cs" />
     <Compile Include="Relationships\Drivers\ContentPickerFieldDriver.cs" />
