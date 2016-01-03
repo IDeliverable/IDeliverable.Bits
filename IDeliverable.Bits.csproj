@@ -94,6 +94,7 @@
     <Content Include="Properties\AssemblyInfo.cs" />
     <Content Include="Module.txt" />
     <Content Include="Views\EditorTemplates\Parts\RelatedBy.cshtml" />
+    <Content Include="Views\EditorTemplates\Elements\NamedElement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
@@ -130,6 +131,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Layouts\Drivers\NamedElementDriver.cs" />
+    <Compile Include="Layouts\Helpers\NamedElementExtensions.cs" />
+    <Compile Include="Layouts\ViewModels\NamedElementViewModel.cs" />
     <Compile Include="Layouts\Shapes\ElementShapeAlternates.cs" />
     <Compile Include="Relationships\Drivers\RelatedByPartDriver.cs" />
     <Compile Include="Relationships\ViewModels\RelatedByByViewModel.cs" />

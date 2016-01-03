@@ -1,0 +1,13 @@
+﻿@model IDeliverable.Bits.Layouts.ViewModels.NamedElementViewModel
+<fieldset>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, T("Name"))
+        @Html.TextBoxFor(m => m.Name, new { @class = "text large" })
+        @Html.Hint(T("Specify a name for the element. When specified, an alternate for this element is autmatically added to its shape for easy customization from your theme."))
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Alternate, T("Alternate"))
+        @Html.TextBoxFor(m => m.Alternate, new { @class = "text large" })
+        @Html.Hint(T("Specify a value used to add some alternates for the element shape."))
+    </div>
+</fieldset>
