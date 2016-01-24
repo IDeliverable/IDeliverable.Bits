@@ -11,9 +11,7 @@ namespace IDeliverable.Bits.RuleProviders
 {
     public class ActionRuleProvider : Component, IConditionProvider
     {
-        public ActionRuleProvider(IWorkContextAccessor workContextAccessor, IRouteValuesProcessor routeValuesProcessor)
-            : base()
-        {
+        public ActionRuleProvider(IWorkContextAccessor workContextAccessor, IRouteValuesProcessor routeValuesProcessor) {
             mWorkContextAccessor = workContextAccessor;
             mRouteValuesProcessor = routeValuesProcessor;
         }
