@@ -160,7 +160,7 @@
     <Compile Include="Services\IRouteValuesProcessor.cs" />
     <Compile Include="Services\RouteValuesAlternatesProvider.cs" />
     <Compile Include="Navigation\Shapes\MenuWidgetShapeAlternates.cs" />
-    <Compile Include="RuleProviders\ActionRuleProvider.cs" />
+    <Compile Include="ConditionProviders\ActionConditionProvider.cs" />
     <Compile Include="Services\RouteValuesProcessor.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -7,7 +7,7 @@ using Orchard.Conditions.Services;
 using Orchard.Logging;
 using Orchard.UI.Navigation;
 
-namespace IDeliverable.Bits.RuleProviders
+namespace IDeliverable.Bits.ConditionProviders
 {
     public class ActionRuleProvider : Component, IConditionProvider
     {
