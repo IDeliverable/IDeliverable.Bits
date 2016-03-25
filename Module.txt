@@ -2,8 +2,8 @@
 AntiForgery: enabled
 Author: IDeliverable
 Website: http://www.ideliverable.com
-Version: 1.0
-OrchardVersion: 1.0
+Version: 1.1
+OrchardVersion: 1.10
 Description: Provides various useful bits and bobs for site building.
 Features:
     IDeliverable.Bits:

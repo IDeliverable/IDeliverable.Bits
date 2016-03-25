@@ -154,7 +154,6 @@
     <Compile Include="Helpers\ZoneHelpers.cs" />
     <Compile Include="Navigation\Migrations\Migrations.cs" />
     <Compile Include="Navigation\Filters\OmniNavigationProvider.cs" />
-    <Compile Include="Recipes\Builders\RemovePublishedUtcStep.cs" />
     <Compile Include="Services\CurrentContentAccessor.cs" />
     <Compile Include="Services\ICurrentContentAccessor.cs" />
     <Compile Include="Services\IRouteValuesProcessor.cs" />
