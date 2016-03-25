@@ -10,6 +10,7 @@ Features:
         Name: Bits
         Description: Enables various useful bits and bobs.
         Category: Designer
+        Dependencies: Orchard.Alias, Orchard.Conditions
     IDeliverable.Bits.Navigation
         Name: Navigation Bits
         Description: Enables useful bits and bobs related to navigation.
@@ -30,3 +31,8 @@ Features:
         Description: Extends ContentPickerField by storing the related content item IDs into the database so that the related content themselves can query who they are linked to via the RelatedByPart.
         Category: Content
         Dependencies: Orchard.ContentPicker
+    IDeliverable.Bits.Layouts
+        Name: Layouts Bits
+        Description: Provides additional elements and shape alternates.
+        Category: Content
+        Dependencies: Orchard.Layouts

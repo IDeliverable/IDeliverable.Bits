@@ -3,17 +3,15 @@ using System.Linq;
 using System.Web.Routing;
 using IDeliverable.Bits.Services;
 using Orchard;
+using Orchard.Conditions.Services;
 using Orchard.Logging;
 using Orchard.UI.Navigation;
-using Orchard.Widgets.Services;
 
-namespace IDeliverable.Bits.RuleProviders
+namespace IDeliverable.Bits.ConditionProviders
 {
-    public class ActionRuleProvider : Component, IRuleProvider
+    public class ActionRuleProvider : Component, IConditionProvider
     {
-        public ActionRuleProvider(IWorkContextAccessor workContextAccessor, IRouteValuesProcessor routeValuesProcessor)
-            : base()
-        {
+        public ActionRuleProvider(IWorkContextAccessor workContextAccessor, IRouteValuesProcessor routeValuesProcessor) {
             mWorkContextAccessor = workContextAccessor;
             mRouteValuesProcessor = routeValuesProcessor;
         }
@@ -22,7 +20,7 @@ namespace IDeliverable.Bits.RuleProviders
         private readonly IWorkContextAccessor mWorkContextAccessor;
         private readonly IRouteValuesProcessor mRouteValuesProcessor;
 
-        public void Process(RuleContext context)
+        public void Evaluate(ConditionEvaluationContext context)
         {
             // Example: action("action", "controller", "area", "value1=a, value2=b")
             if (!String.Equals(context.FunctionName, RuleFunctionName, StringComparison.OrdinalIgnoreCase))
@@ -57,7 +55,7 @@ namespace IDeliverable.Bits.RuleProviders
             return mRouteValuesProcessor.Parse(routeValuesText);
         }
 
-        private static string GetArgument(RuleContext context, int index)
+        private static string GetArgument(ConditionEvaluationContext context, int index)
         {
             return context.Arguments.Count() - 1 >= index ? (string)context.Arguments[index] : default(string);
         }
