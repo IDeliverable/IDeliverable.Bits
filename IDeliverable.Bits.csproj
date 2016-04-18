@@ -48,6 +48,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="IDeliverable.Bits.RegularExpressions, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Regex\IDeliverable.Bits.RegularExpressions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -93,6 +97,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Placement.info" />
+    <Content Include="Regex\IDeliverable.Bits.RegularExpressions.dll" />
     <Content Include="Web.config" />
     <Content Include="Properties\AssemblyInfo.cs" />
     <Content Include="Module.txt" />
@@ -138,6 +143,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filters\AppRelativeUrlFilter.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions.cs" />
     <Compile Include="Layouts\Drivers\NamedElementDriver.cs" />
     <Compile Include="Layouts\Helpers\NamedElementExtensions.cs" />
     <Compile Include="Layouts\ViewModels\NamedElementViewModel.cs" />

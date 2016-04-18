@@ -36,3 +36,7 @@ Features:
         Description: Provides additional elements and shape alternates.
         Category: Content
         Dependencies: Orchard.Layouts
+    IDeliverable.Bits.AppRelativeUrlFilter
+        Name: App Relative URL Filter Bits
+        Description: Enables an IHtmlFilter implementation that converts app relative paths (starting with ~/) into relative paths.
+        Category: Content
