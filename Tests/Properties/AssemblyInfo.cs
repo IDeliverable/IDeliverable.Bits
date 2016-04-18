@@ -1,16 +1,16 @@
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Security;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("IDeliverable.Bits")]
+[assembly: AssemblyTitle("IDeliverable.Bits.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("IDeliverable.Bits")]
-[assembly: AssemblyCopyright("Copyright � IDeliverable, Ltd.")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("IDeliverable.Bits.Tests")]
+[assembly: AssemblyCopyright("Copyright © IDeliverable, Ltd.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Security;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9eaa2f5b-94da-454a-b38d-b9e2bc640c3d")]
+[assembly: Guid("965bf918-72ab-4333-a0dc-2e435260978b")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,9 +29,8 @@ using System.Security;
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Revision and Build Numbers 
+// You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-
