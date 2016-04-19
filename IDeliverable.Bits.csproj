@@ -97,7 +97,6 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Placement.info" />
-    <Content Include="Regex\IDeliverable.Bits.RegularExpressions.dll" />
     <Content Include="Web.config" />
     <Content Include="Properties\AssemblyInfo.cs" />
     <Content Include="Module.txt" />
@@ -113,13 +112,13 @@
       <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
       <Name>Orchard.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Orchard.Autoroute\Orchard.Autoroute.csproj">
+      <Project>{66fccd76-2761-47e3-8d11-b45d0001ddaa}</Project>
+      <Name>Orchard.Autoroute</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Orchard.Conditions\Orchard.Conditions.csproj">
       <Project>{98251eae-a41b-47b2-aa91-e28b8482da70}</Project>
       <Name>Orchard.Conditions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Orchard.Alias\Orchard.Alias.csproj">
-      <Project>{475b6c45-b27c-438b-8966-908b9d6d1077}</Project>
-      <Name>Orchard.Alias</Name>
     </ProjectReference>
     <ProjectReference Include="..\Orchard.Conditions\Orchard.Conditions.csproj">
       <Project>{98251eae-a41b-47b2-aa91-e28b8482da70}</Project>
@@ -129,9 +128,21 @@
       <Project>{f301ef7d-f19c-4d83-aa94-cb64f29c037d}</Project>
       <Name>Orchard.ContentPicker</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Orchard.Forms\Orchard.Forms.csproj">
+      <Project>{642a49d7-8752-4177-80d6-bfbbcfad3de0}</Project>
+      <Name>Orchard.Forms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Orchard.Layouts\Orchard.Layouts.csproj">
       <Project>{6bd8b2fa-f2e3-4ac8-a4c3-2925a653889a}</Project>
       <Name>Orchard.Layouts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.Projections\Orchard.Projections.csproj">
+      <Project>{5531e894-d259-45a3-aa61-26dbe720c1ce}</Project>
+      <Name>Orchard.Projections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.Taxonomies\Orchard.Taxonomies.csproj">
+      <Project>{e649ea64-d213-461b-87f7-d67035801443}</Project>
+      <Name>Orchard.Taxonomies</Name>
     </ProjectReference>
     <ProjectReference Include="..\Orchard.Tokens\Orchard.Tokens.csproj">
       <Project>{6f759635-13d7-4e94-bcc9-80445d63f117}</Project>
@@ -143,12 +154,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConditionProviders\ContentItemTypeConditionProvider.cs" />
     <Compile Include="Filters\AppRelativeUrlFilter.cs" />
     <Compile Include="Helpers\HtmlHelperExtensions.cs" />
     <Compile Include="Layouts\Drivers\NamedElementDriver.cs" />
     <Compile Include="Layouts\Helpers\NamedElementExtensions.cs" />
     <Compile Include="Layouts\ViewModels\NamedElementViewModel.cs" />
     <Compile Include="Layouts\Shapes\ElementShapeAlternates.cs" />
+    <Compile Include="Projections\ExclusionFilter.cs" />
+    <Compile Include="Projections\RelatedContentFilter.cs" />
+    <Compile Include="Projections\TermsFilter.cs" />
+    <Compile Include="Projections\ExclusionFilterForms.cs" />
+    <Compile Include="Projections\RelatedContentFilterForms.cs" />
+    <Compile Include="Projections\TermsFilterForms.cs" />
     <Compile Include="Relationships\Drivers\RelatedByPartDriver.cs" />
     <Compile Include="Relationships\ViewModels\RelatedByByViewModel.cs" />
     <Compile Include="Relationships\Drivers\ContentPickerFieldDriver.cs" />
@@ -168,6 +186,7 @@
     <Compile Include="Navigation\Shapes\MenuWidgetShapeAlternates.cs" />
     <Compile Include="ConditionProviders\ActionConditionProvider.cs" />
     <Compile Include="Services\RouteValuesProcessor.cs" />
+    <Compile Include="Tokens\RequestTokens.cs" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

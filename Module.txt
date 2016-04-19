@@ -10,7 +10,7 @@ Features:
         Name: Bits
         Description: Enables various useful bits and bobs.
         Category: Designer
-        Dependencies: Orchard.Alias, Orchard.Conditions
+        Dependencies: Orchard.Autoroute, Orchard.Conditions
     IDeliverable.Bits.Navigation
         Name: Navigation Bits
         Description: Enables useful bits and bobs related to navigation.
@@ -36,6 +36,11 @@ Features:
         Description: Provides additional elements and shape alternates.
         Category: Content
         Dependencies: Orchard.Layouts
+    IDeliverable.Bits.Projections
+        Name: Projection Bits
+        Description: Provides additional projection filters.
+        Category: Content
+        Dependencies: Orchard.Forms, Orchard.Projections, Orchard.Taxonomies
     IDeliverable.Bits.AppRelativeUrlFilter
         Name: App Relative URL Filter Bits
         Description: Enables an IHtmlFilter implementation that converts app relative paths (starting with ~/) into relative paths.
