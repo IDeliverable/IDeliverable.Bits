@@ -9,19 +9,19 @@ namespace IDeliverable.Bits.Filters
     [OrchardFeature("IDeliverable.Bits.AppRelativeUrlFilter")]
     public class AppRelativeUrlFilter : IHtmlFilter
     {
-        private readonly string mAppRoot;
+        private readonly Lazy<string> mAppRoot;
 
         public AppRelativeUrlFilter(UrlHelper urlHelper)
         {
-            mAppRoot = urlHelper.Content("~/");
+            mAppRoot = new Lazy<string>(() => urlHelper.Content("~/"));
         }
 
         public string ProcessContent(string text, string flavor)
         {
             if (!StringEqualsAny(flavor, "html", "markdown"))
                 return text;
-            
-            return text.Replace("~/", mAppRoot);
+
+            return text.Replace("~/", mAppRoot.Value);
         }
 
         private bool StringEqualsAny(string subject, params string[] strings)
