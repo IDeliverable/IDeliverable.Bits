@@ -40,6 +40,8 @@ namespace IDeliverable.Bits.Navigation.Shapes
                     context.ShapeMetadata.Alternates.Add($"Parts_MenuWidget__WidgetName__{widgetName}");
 
                 context.ShapeMetadata.Alternates.Add($"Parts_MenuWidget__MenuName__{menuName}");
+                context.ShapeMetadata.Alternates.Add($"Parts_MenuWidget__MenuLevel__{menuWidgetPart.StartLevel}");
+                context.ShapeMetadata.Alternates.Add($"Parts_MenuWidget__MenuName__{menuName}__MenuLevel{menuWidgetPart.StartLevel}");
                 context.ShapeMetadata.Alternates.Add($"Parts_MenuWidget__Zone__{zoneName}");
                 context.ShapeMetadata.Alternates.Add($"Parts_MenuWidget__Zone__{zoneName}__MenuName__{menuName}");
 
@@ -60,14 +62,20 @@ namespace IDeliverable.Bits.Navigation.Shapes
                 return;
 
             var widgetPart = widget.As<WidgetPart>();
+            var menuWidgetPart = widget.As<MenuWidgetPart>();
             var menuName = (string)context.Shape.SafeMenuName;
             var widgetName = widgetPart.Name;
             var shapeType = context.ShapeMetadata.Type;
 
             if (!String.IsNullOrWhiteSpace(widgetName))
+            {
                 context.ShapeMetadata.Alternates.Add($"{shapeType}__WidgetName__{widgetName}");
+                context.ShapeMetadata.Alternates.Add($"{shapeType}__WidgetName__{widgetName}__MenuLevel{menuWidgetPart.StartLevel}");
+            }
 
             context.ShapeMetadata.Alternates.Add($"{shapeType}__MenuName__{menuName}");
+            context.ShapeMetadata.Alternates.Add($"{shapeType}__MenuLevel__Level{menuWidgetPart.StartLevel}");
+            context.ShapeMetadata.Alternates.Add($"{shapeType}__MenuName__{menuName}__MenuLevel{menuWidgetPart.StartLevel}");
 
             ApplyRecursively(context.Shape.Items, (Action<dynamic>)(menuItemShape =>
             {
