@@ -81,7 +81,7 @@ namespace IDeliverable.Bits.Projections
 
             return String.IsNullOrEmpty(taxonomyFieldExpression)
                 ? T("All content items")
-                : T("Related content items whose {0} field share one or more terms withthe current content item", taxonomyFieldExpression);
+                : T("Related content items whose {0} field share one or more terms with the current content item", taxonomyFieldExpression);
         }
 
         private IEnumerable<TermPart> ExpandTerms(IEnumerable<TermPart> terms)
