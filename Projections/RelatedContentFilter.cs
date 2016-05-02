@@ -18,7 +18,6 @@ namespace IDeliverable.Bits.Projections
     public class RelatedContentFilter : Component, IFilterProvider
     {
         private readonly ITaxonomyService mTaxonomyService;
-        private int mTermsFilterId;
         private readonly ICurrentContentAccessor mCurrentContentAccessor;
 
         public RelatedContentFilter(ITaxonomyService taxonomyService, ICurrentContentAccessor currentContentAccessor)
