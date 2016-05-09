@@ -10,12 +10,10 @@ namespace IDeliverable.Bits.ConditionProviders
     public class ContentItemTypeConditionProvider : Component, IConditionProvider
     {
         private const string RuleFunctionName = "contentitemtype";
-        private readonly IWorkContextAccessor mWorkContextAccessor;
-        private readonly IRouteValuesProcessor mRouteValuesProcessor;
-        private readonly ICurrentContentAccessor _currentContentAccessor;
+        private readonly ICurrentContentAccessor mCurrentContentAccessor;
 
         public ContentItemTypeConditionProvider(ICurrentContentAccessor currentContentAccessor) {
-            _currentContentAccessor = currentContentAccessor;
+            mCurrentContentAccessor = currentContentAccessor;
         }
 
         public void Evaluate(ConditionEvaluationContext context)
@@ -25,7 +23,7 @@ namespace IDeliverable.Bits.ConditionProviders
                 return;
 
             var contentTypeName = GetArgument(context, 0);
-            var result = _currentContentAccessor.CurrentContentItem?.ContentType == contentTypeName;
+            var result = mCurrentContentAccessor.CurrentContentItem?.ContentType == contentTypeName;
 
             Logger.Debug("Layer rule {0}({1}) evaluated to {2}.", RuleFunctionName, contentTypeName, result);
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Web;
 using Orchard.UI;
 
 namespace IDeliverable.Bits.Helpers
@@ -17,17 +18,24 @@ namespace IDeliverable.Bits.Helpers
                     var itemIsWidget = item.Metadata != null && item.Metadata.Type == "Widget";
                     var itemHasValue = item.Value != null && !String.IsNullOrWhiteSpace(item.Value.ToString());
                     var itemIsTitlePart = item.Metadata != null && item.Metadata.Type == "Parts_Title";
+                    var itemIsString = item is IHtmlString;
 
                     if (itemIsWidget)
                     {
                         var menuWidget = FindShape(item.Content, "Parts_MenuWidget");
 
-                        if (menuWidget != null)
-                            return menuWidget.Menu.Items.Count > 0;
+                        if (menuWidget != null && menuWidget.Items.Count > 0)
+                            return true;
                     }
 
-                    if (itemIsTitlePart)
-                        return item.ContentPart.IsHidden.Value != true;
+                    if (itemIsTitlePart && item.ContentPart.IsHidden != null && item.ContentPart.IsHidden.Value != true)
+                        return true;
+
+                    if (itemIsString)
+                    {
+                        if (!String.IsNullOrWhiteSpace(((IHtmlString)item).ToString()))
+                            return true;
+                    }
 
                     if (itemIsNotTextField || itemHasValue)
                         return true;

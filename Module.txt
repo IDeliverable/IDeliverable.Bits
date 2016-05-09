@@ -37,7 +37,7 @@ Features:
         Category: Content
         Dependencies: Orchard.Layouts
     IDeliverable.Bits.Projections
-        Name: Projection Bits
+        Name: Projections Bits
         Description: Provides additional projection filters.
         Category: Content
         Dependencies: Orchard.Forms, Orchard.Projections, Orchard.Taxonomies
