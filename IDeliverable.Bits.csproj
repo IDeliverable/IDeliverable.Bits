@@ -167,6 +167,7 @@
     <Compile Include="Projections\ExclusionFilterForms.cs" />
     <Compile Include="Projections\RelatedContentFilterForms.cs" />
     <Compile Include="Projections\TermsFilterForms.cs" />
+    <Compile Include="Recipes\Builders\RemovePublishedUtcStep.cs" />
     <Compile Include="Relationships\Drivers\RelatedByPartDriver.cs" />
     <Compile Include="Relationships\ViewModels\RelatedByByViewModel.cs" />
     <Compile Include="Relationships\Drivers\ContentPickerFieldDriver.cs" />
