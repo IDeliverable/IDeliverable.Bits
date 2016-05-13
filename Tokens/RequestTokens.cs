@@ -36,7 +36,7 @@ namespace IDeliverable.Bits.Tokens
 
         private ContentItem GetRoutedContentItem()
         {
-            return mCurrentContentAccessor.CurrentContentItem;
+            return mCurrentContentAccessor.CurrentContentItem ?? mOrchardServices.ContentManager.New("Null");
         }
 
         private string DisplayText(IContent content)
