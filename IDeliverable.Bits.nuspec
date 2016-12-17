@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+        <id>IDeliverable.Bits</id>
+		<title>IDeliverable.Bits</title>
+        <version>1.0.0</version>
+        <authors>IDeliverable Ltd.</authors>
+        <owners>IDeliverable Ltd.</owners>
+        <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/IDeliverable/IDeliverable.Bits</projectUrl>
+        <iconUrl>http://storage.ideliverable.com/media/Default/Products/IDeliverable.Bits-Logo-256.png</iconUrl>
+		<language>en-US</language>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A module for the Orchard CMS that provides various useful bits and bobs for site building.</description>
+        <summary>IDeliverable.Bits is a module for the Orchard CMS that provides various useful pieces of functionality commonly needed for site building. While working on site building projects we often find ourselves needing utility functionality that would be useful beyond the project at hand. This module is the place where we collect such useful bits and bobs, to re-use in future projects and to contribute to anyone else who might find them useful.</summary>
+        <tags>IDeliverable Bits Utility Orchard CMS Module</tags>
+    </metadata>
+    <files>
+        <file src="**" target="content\Modules\IDeliverable.Bits" exclude="bin\*.*;obj\**;*.user;Package.cmd" />
+    </files>
+</package>

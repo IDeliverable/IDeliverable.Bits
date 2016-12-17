@@ -1,6 +1,6 @@
 ﻿Name: IDeliverable.Bits
 AntiForgery: enabled
-Author: IDeliverable
+Author: IDeliverable, Ltd.
 Website: http://www.ideliverable.com
 Version: 1.1
 OrchardVersion: 1.10
@@ -8,40 +8,40 @@ Description: Provides various useful bits and bobs for site building.
 Features:
     IDeliverable.Bits:
         Name: Bits
-        Description: Enables various useful bits and bobs.
+        Description: Adds miscellaneous useful bits and bobs.
         Category: Designer
         Dependencies: Orchard.Autoroute, Orchard.Conditions, Orchard.Tokens
     IDeliverable.Bits.Navigation
         Name: Navigation Bits
-        Description: Enables useful bits and bobs related to navigation.
+        Description: Adds useful bits and bobs related to navigation.
         Category: Navigation
         Dependencies: Navigation, Orchard.Widgets
     IDeliverable.Bits.Recipes
         Name: Recipes Bits
-        Description: Enables useful bits and bobs related to recipes.
+        Description: Adds useful bits and bobs related to recipes.
         Category: Content
         Dependencies: Orchard.Recipes
-    IDeliverable.Bits.Sockets
-        Name: Sockets Bits
-        Description: Adds the ability to associate content items with one another. Similar to connecting content through Taxonomy Terms, but without the need for taxonomies.
-        Category: Content
-        Dependencies: Orchard.ContentPicker
-    IDeliverable.Bits.Relationships
-        Name: Relationships Bits
-        Description: Extends ContentPickerField by storing the related content item IDs into the database so that the related content themselves can query who they are linked to via the RelatedByPart.
-        Category: Content
-        Dependencies: Orchard.ContentPicker
     IDeliverable.Bits.Layouts
-        Name: Layouts Bits
-        Description: Provides additional elements and shape alternates.
+        Name: Layout Bits
+        Description: Adds useful bits and bobs related to layouts, such as useful elements and shape alternates.
         Category: Content
         Dependencies: Orchard.Layouts
     IDeliverable.Bits.Projections
-        Name: Projections Bits
-        Description: Provides additional projection filters.
+        Name: Projection Bits
+        Description: Adds useful bits and bobs related to projections, such as useful additional projection filters.
         Category: Content
         Dependencies: Orchard.Forms, Orchard.Projections, Orchard.Taxonomies
+    IDeliverable.Bits.Sockets
+        Name: Content Sockets
+        Description: Adds the ability to associate content items with one another without the need for taxonomies.
+        Category: Content
+        Dependencies: Orchard.ContentPicker
+    IDeliverable.Bits.Relationships
+        Name: Content Picker Field Trace-Back
+        Description: Extends ContentPickerField by storing the related content item IDs into the database so that the related content themselves can query who they are linked to via the RelatedByPart.
+        Category: Content
+        Dependencies: Orchard.ContentPicker
     IDeliverable.Bits.AppRelativeUrlFilter
-        Name: App Relative URL Filter Bits
-        Description: Enables an IHtmlFilter implementation that converts app relative paths (starting with ~/) into relative paths.
+        Name: App-Relative URL Filter
+        Description: Adds an IHtmlFilter implementation that converts app-relative URLs (starting with ~/) into relative URLs.
         Category: Content

@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="IDeliverable.Bits.nuspec" />
     <None Include="Placement.info" />
     <Content Include="Web.config" />
     <Compile Include="Properties\AssemblyInfo.cs" />
