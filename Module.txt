@@ -1,7 +1,7 @@
 ﻿Name: IDeliverable.Bits
 AntiForgery: enabled
 Author: IDeliverable, Ltd.
-Website: http://www.ideliverable.com
+Website: https://github.com/IDeliverable/IDeliverable.Bits
 Version: 1.1
 OrchardVersion: 1.10
 Description: Provides various useful bits and bobs for site building.
