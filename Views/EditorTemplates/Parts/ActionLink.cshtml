@@ -4,21 +4,21 @@
     <div>
         @Html.LabelFor(m => m.ActionName, T("Action"))
         @Html.TextBoxFor(m => m.ActionName, new { @class = "text-box textMedium" })
-        <div class="hint">@T("The name of the action.")</div>
+        @Html.Hint(T("The name of the action."))
     </div>
     <div>
         @Html.LabelFor(m => m.ControllerName, T("Controller"))
         @Html.TextBoxFor(m => m.ControllerName, new { @class = "text-box textMedium" })
-        <div class="hint">@T("The name of the controller.")</div>
+        @Html.Hint(T("The name of the controller (without the 'Controller' suffix)."))
     </div>
     <div>
         @Html.LabelFor(m => m.AreaName, T("Area"))
         @Html.TextBoxFor(m => m.AreaName, new { @class = "text-box textMedium" })
-        <div class="hint">@T("The name of the area.")</div>
+        @Html.Hint(T("The name of the area (usually the name of the module containing the controller)."))
     </div>
     <div>
         @Html.LabelFor(m => m.RouteValues, T("Route Values"))
         @Html.TextBoxFor(m => m.RouteValues, new { @class = "large text tokenized text-box" })
-        <div class="hint">@T("Specify zero or more key/value pairs separated by a comma. Both keys and values can be entered as tokens, i.e.: id = {Request.QueryString:id}, returnUrl = ~/.")</div>
+        @Html.Hint(T("Specify zero or more key/value pairs separated by a comma. Both keys and values can be entered as tokens, i.e.: id = {Request.QueryString:id}, returnUrl = ~/."))
     </div>
 </fieldset>

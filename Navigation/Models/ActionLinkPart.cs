@@ -6,7 +6,7 @@ namespace IDeliverable.Bits.Navigation.Models
 {
     public class ActionLinkPart : ContentPart
     {
-        internal LazyField<RouteValueDictionary> RouteValueDictionaryField = new LazyField<RouteValueDictionary>();
+        internal readonly LazyField<RouteValueDictionary> RouteValueDictionaryField = new LazyField<RouteValueDictionary>();
 
         public string ActionName
         {
