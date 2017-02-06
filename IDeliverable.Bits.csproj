@@ -99,10 +99,16 @@
     <Content Include="IDeliverable.Bits.nuspec" />
     <None Include="Placement.info" />
     <Content Include="Web.config" />
+    <Compile Include="Navigation\Drivers\ActionLinkPartDriver.cs" />
+    <Compile Include="Navigation\Filters\ActionLinkNavigationFilter.cs" />
+    <Compile Include="Navigation\Handlers\ActionLinkPartHandler.cs" />
+    <Compile Include="Navigation\Models\ActionLinkPart.cs" />
+    <Compile Include="Navigation\Shapes\RouteValuesAlternatesProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Module.txt" />
     <Content Include="Views\EditorTemplates\Parts\RelatedBy.cshtml" />
     <Content Include="Views\EditorTemplates\Elements\NamedElement.cshtml" />
+    <Content Include="Views\EditorTemplates\Parts\ActionLink.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">

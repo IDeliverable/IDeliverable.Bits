@@ -14,15 +14,15 @@ namespace IDeliverable.Bits.Navigation.Filters
     [OrchardFeature("IDeliverable.Bits.Navigation")]
     public class OmniNavigationProvider : Component, INavigationFilter
     {
-        private readonly IMenuService mMenuService;
-        private readonly Lazy<INavigationManager> mNavigationManager; // Using Lazy because NavigationManager has a dependency on IEnumerable<NavigationFilter>.
-        private readonly Stack<int> mCallStack = new Stack<int>();
-
         public OmniNavigationProvider(IMenuService menuService, Lazy<INavigationManager> navigationManager)
         {
             mMenuService = menuService;
             mNavigationManager = navigationManager;
         }
+
+        private readonly IMenuService mMenuService;
+        private readonly Lazy<INavigationManager> mNavigationManager; // Using Lazy because NavigationManager has a dependency on IEnumerable<NavigationFilter>.
+        private readonly Stack<int> mCallStack = new Stack<int>();
 
         public IEnumerable<MenuItem> Filter(IEnumerable<MenuItem> items)
         {
@@ -50,7 +50,8 @@ namespace IDeliverable.Bits.Navigation.Filters
                         }
                     }
                 }
-                else {
+                else
+                {
                     yield return item;
                 }
             }

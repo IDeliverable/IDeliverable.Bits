@@ -1,3 +1,5 @@
 ﻿<Placement>
-    <Place Parts_ConnectedBy_Edit="Content:3.1#Connected By" />
+    <Place
+        Parts_ConnectedBy_Edit="Content:3.1#Connected By"
+        Parts_ActionLink_Edit="Content:0" />
 </Placement>

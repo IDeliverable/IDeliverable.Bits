@@ -1,0 +1,24 @@
+﻿@model IDeliverable.Bits.Navigation.Models.ActionLinkPart
+@Display.TokenHint()
+<fieldset>
+    <div>
+        @Html.LabelFor(m => m.ActionName, T("Action"))
+        @Html.TextBoxFor(m => m.ActionName, new { @class = "text-box textMedium" })
+        <div class="hint">@T("The name of the action.")</div>
+    </div>
+    <div>
+        @Html.LabelFor(m => m.ControllerName, T("Controller"))
+        @Html.TextBoxFor(m => m.ControllerName, new { @class = "text-box textMedium" })
+        <div class="hint">@T("The name of the controller.")</div>
+    </div>
+    <div>
+        @Html.LabelFor(m => m.AreaName, T("Area"))
+        @Html.TextBoxFor(m => m.AreaName, new { @class = "text-box textMedium" })
+        <div class="hint">@T("The name of the area.")</div>
+    </div>
+    <div>
+        @Html.LabelFor(m => m.RouteValues, T("Route Values"))
+        @Html.TextBoxFor(m => m.RouteValues, new { @class = "large text tokenized text-box" })
+        <div class="hint">@T("Specify zero or more key/value pairs separated by a comma. Both keys and values can be entered as tokens, i.e.: id = {Request.QueryString:id}, returnUrl = ~/.")</div>
+    </div>
+</fieldset>

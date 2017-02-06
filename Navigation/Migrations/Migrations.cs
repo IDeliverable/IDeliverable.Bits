@@ -19,7 +19,34 @@ namespace IDeliverable.Bits.Navigation.Migrations
                    .WithSetting("Stereotype", "MenuItem")
                );
 
-            return 1;
+            ContentDefinitionManager.AlterTypeDefinition("ActionLink",
+                cgf => cgf
+                    .WithPart("ActionLinkPart")
+                    .WithPart("MenuPart")
+                    .WithPart("CommonPart")
+                    .WithPart("IdentityPart")
+                    .DisplayedAs("Action Link")
+                    .WithSetting("Description", "Represents a link to a configured controller, action and route values.")
+                    .WithSetting("Stereotype", "MenuItem")
+                );
+
+            return 2;
+        }
+
+        public int UpdateFrom1()
+        {
+            ContentDefinitionManager.AlterTypeDefinition("ActionLink",
+                cgf => cgf
+                    .WithPart("ActionLinkPart")
+                    .WithPart("MenuPart")
+                    .WithPart("CommonPart")
+                    .WithPart("IdentityPart")
+                    .DisplayedAs("Action Link")
+                    .WithSetting("Description", "Represents a link to a configured controller, action and route values.")
+                    .WithSetting("Stereotype", "MenuItem")
+                );
+
+            return 2;
         }
     }
 }
