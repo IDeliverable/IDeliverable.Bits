@@ -115,6 +115,7 @@
     <Content Include="Views\EditorTemplates\Parts\RelatedBy.cshtml" />
     <Content Include="Views\EditorTemplates\Elements\NamedElement.cshtml" />
     <Content Include="Views\EditorTemplates\Parts\ActionLink.cshtml" />
+    <Content Include="Views\EditorTemplates\Elements.Snippet.Field.Html.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
