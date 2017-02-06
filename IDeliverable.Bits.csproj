@@ -106,6 +106,7 @@
     <Compile Include="Helpers\RouteValueDictionaryExtensions.cs" />
     <Compile Include="Navigation\Drivers\ActionLinkPartDriver.cs" />
     <Compile Include="Navigation\Filters\ActionLinkNavigationFilter.cs" />
+    <Compile Include="Navigation\Filters\TaxonomyNavigationProvider.cs" />
     <Compile Include="Navigation\Handlers\ActionLinkPartHandler.cs" />
     <Compile Include="Navigation\Models\ActionLinkPart.cs" />
     <Compile Include="Navigation\Shapes\RouteValuesAlternatesProvider.cs" />
@@ -139,6 +140,10 @@
     <ProjectReference Include="..\Orchard.ContentPicker\Orchard.ContentPicker.csproj">
       <Project>{f301ef7d-f19c-4d83-aa94-cb64f29c037d}</Project>
       <Name>Orchard.ContentPicker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.Fields\Orchard.Fields.csproj">
+      <Project>{3787DDE5-E5C8-4841-BDA7-DCB325388064}</Project>
+      <Name>Orchard.Fields</Name>
     </ProjectReference>
     <ProjectReference Include="..\Orchard.Forms\Orchard.Forms.csproj">
       <Project>{642a49d7-8752-4177-80d6-bfbbcfad3de0}</Project>
