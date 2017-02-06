@@ -48,6 +48,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="IDeliverable.Bits.RegularExpressions, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Regex\IDeliverable.Bits.RegularExpressions.dll</HintPath>
@@ -99,6 +103,7 @@
     <Content Include="IDeliverable.Bits.nuspec" />
     <None Include="Placement.info" />
     <Content Include="Web.config" />
+    <Compile Include="Helpers\RouteValueDictionaryExtensions.cs" />
     <Compile Include="Navigation\Drivers\ActionLinkPartDriver.cs" />
     <Compile Include="Navigation\Filters\ActionLinkNavigationFilter.cs" />
     <Compile Include="Navigation\Handlers\ActionLinkPartHandler.cs" />
@@ -194,6 +199,17 @@
     <Compile Include="Navigation\Shapes\MenuWidgetShapeAlternates.cs" />
     <Compile Include="ConditionProviders\ActionConditionProvider.cs" />
     <Compile Include="Services\RouteValuesProcessor.cs" />
+    <Compile Include="Summarizer\Generators\CharactersSummaryGenerator.cs" />
+    <Compile Include="Summarizer\Generators\ParagraphsSummaryGenerator.cs" />
+    <Compile Include="Summarizer\Generators\PlainTextWordsSummaryGenerator.cs" />
+    <Compile Include="Summarizer\Generators\SummaryGenerators.cs" />
+    <Compile Include="Summarizer\Generators\WordsSummaryGenerator.cs" />
+    <Compile Include="Summarizer\Helpers\HtmlSanitizer.cs" />
+    <Compile Include="Summarizer\Services\ISummarizer.cs" />
+    <Compile Include="Summarizer\Generators\ISummaryGenerator.cs" />
+    <Compile Include="Summarizer\Services\SummarizeContext.cs" />
+    <Compile Include="Summarizer\Services\Summarizer.cs" />
+    <Compile Include="Summarizer\Helpers\HtmlHelperExtensions.cs" />
     <Compile Include="Tokens\RequestTokens.cs" />
   </ItemGroup>
   <ItemGroup />
