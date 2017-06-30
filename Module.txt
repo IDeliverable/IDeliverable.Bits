@@ -15,7 +15,7 @@ Features:
         Name: Navigation Bits
         Description: Adds useful bits and bobs related to navigation.
         Category: Navigation
-        Dependencies: Navigation, Orchard.Widgets
+        Dependencies: IDeliverable.Bits, Navigation, Orchard.Widgets
     IDeliverable.Bits.Recipes
         Name: Recipes Bits
         Description: Adds useful bits and bobs related to recipes.
